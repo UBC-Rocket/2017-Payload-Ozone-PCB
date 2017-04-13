@@ -1,0 +1,382 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">13/04/2017</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:22:31 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc" class="file"><acronym title="C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc">C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">1</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">9</td></tr>
+</table>
+</td>
+</table><a name="IDASASVB"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAEBSVB">Your board contains 1 shelved polygon - copper connectivity will not be reported correctly. Unshelve polygons and re-run DRC check before  producing manufacturing outputs.</a></td>
+<td class="column2">1</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">1</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAOBSVB">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAUBSVB">Silk primitive without silk layer</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA0BSVB">Clearance Constraint (Gap=0.15mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAACSVB">Width Constraint (Min=0.25mm) (Max=10mm) (Preferred=0.25mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAGCSVB">Power Plane Connect Rule(Relief Connect )(Expansion=0.25mm) (Conductor Width=0.25mm) (Air Gap=0.25mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAMCSVB">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDASCSVB">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA4CSVB">Hole Size Constraint (Min=0.3mm) (Max=10mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAEDSVB">Height Constraint (Min=0mm) (Max=100mm) (Prefered=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAKDSVB">Hole To Hole Clearance (Gap=0.25mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAQDSVB">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAWDSVB">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA2DSVB">Silk to Silk (Clearance=0.25mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDACESVB">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDASFSVB">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">9</td>
+</tr>
+</table><br><a name="IDABBSVB"><h2>Warnings</h2></a><a name="IDAEBSVB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Your board contains 1 shelved polygon - copper connectivity will not be reported correctly. Unshelve polygons and re-run DRC check before  producing manufacturing outputs.</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Polygon named: GND In net GND On Bottom Layer</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDASCSVB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2207.087mil|Location2.X=2650.012mil|Location1.Y=4163.779mil|Location2.Y=3782.272mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2207.087mil|Location2.X=2650.012mil|Location1.Y=4163.779mil|Location2.Y=3782.272mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Track (19.1mm,53.8mm)(19.148mm,53.752mm) on Top Layer And Track (25.27mm,39.03mm)(25.27mm,40.445mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDACESVB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2100.831mil|Location2.X=2173.529mil|Location1.Y=2829.177mil|Location2.Y=2945.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2100.831mil|Location2.X=2173.529mil|Location1.Y=2829.177mil|Location2.Y=2945.835mil|Absolute=True">Net Antennae: Via (14.65mm,18.15mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2530.764mil|Location2.X=2577.751mil|Location1.Y=3663.024mil|Location2.Y=3736.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2530.764mil|Location2.X=2577.751mil|Location1.Y=3663.024mil|Location2.Y=3736.253mil|Absolute=True">Net Antennae: Via (25.27mm,39.03mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3008.312mil|Location2.X=3055.298mil|Location1.Y=2709.098mil|Location2.Y=2782.327mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3008.312mil|Location2.X=3055.298mil|Location1.Y=2709.098mil|Location2.Y=2782.327mil|Absolute=True">Net Antennae: Via (37.4mm,14.8mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3004.374mil|Location2.X=3051.36mil|Location1.Y=4201.224mil|Location2.Y=4274.453mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3004.374mil|Location2.X=3051.36mil|Location1.Y=4201.224mil|Location2.Y=4274.453mil|Absolute=True">Net Antennae: Via (37.3mm,52.7mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3004.374mil|Location2.X=3051.36mil|Location1.Y=4634.296mil|Location2.Y=4707.525mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3004.374mil|Location2.X=3051.36mil|Location1.Y=4634.296mil|Location2.Y=4707.525mil|Absolute=True">Net Antennae: Via (37.3mm,63.7mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2744.532mil|Location2.X=2791.519mil|Location1.Y=4606.736mil|Location2.Y=4679.965mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2744.532mil|Location2.X=2791.519mil|Location1.Y=4606.736mil|Location2.Y=4679.965mil|Absolute=True">Net Antennae: Via (30.7mm,63mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2173.666mil|Location2.X=2220.653mil|Location1.Y=3433.508mil|Location2.Y=3506.737mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2173.666mil|Location2.X=2220.653mil|Location1.Y=3433.508mil|Location2.Y=3506.737mil|Absolute=True">Net Antennae: Via (16.2mm,33.2mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDASFSVB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Modified Polygon (Allow modified: No), (Allow shelved: No)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1590.551mil|Location2.X=3803.15mil|Location1.Y=2192.913mil|Location2.Y=4677.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\thekenu\Documents\UBC(GitHub)\UBC Rocket\2017-Payload-Ozone-PCB\Altium\2017_Ozone.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1590.551mil|Location2.X=3803.15mil|Location1.Y=2192.913mil|Location2.Y=4677.165mil|Absolute=True">Modified Polygon: Polygon Shelved  (GND) on Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
