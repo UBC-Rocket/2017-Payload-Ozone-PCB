@@ -107,6 +107,10 @@ GenerateClassCluster=0
 DocumentUniqueId=BGNYXXXD
 
 [GeneratedDocument1]
+DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.xls
+DItemRevisionGUID=
+
+[GeneratedDocument2]
 DocumentPath=Project Outputs for 2017_Ozone\Design Rule Check - 2017_Ozone.html
 DItemRevisionGUID=
 
@@ -468,7 +472,7 @@ OutputDefault12=0
 [OutputGroup6]
 Name=Report Outputs
 Description=
-TargetPrinter=PDFCreator
+TargetPrinter=Canon MG2900 series Printer
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=BOM_PartType
 OutputName1=Bill of Materials
@@ -478,11 +482,23 @@ OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 Configuration1_Name1=ColumnNameFormat
 Configuration1_Item1=CaptionAsName
+Configuration1_Name2=Filter
+Configuration1_Item2=545046300E5446696C74657257726170706572000D46696C7465722E416374697665090F46696C7465722E43726974657269610A04000000000000000000
+Configuration1_Name3=General
+Configuration1_Item3=OpenExported=False|AddToProject=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePCBData=False|IncludeVaultData=False|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=BOM Simple.XLT|BatchMode=5|FormWidth=1674|FormHeight=1164|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>
+Configuration1_Name4=GroupOrder
+Configuration1_Item4=Comment=True|Footprint=True
+Configuration1_Name5=SortOrder
+Configuration1_Item5=Description=Down
+Configuration1_Name6=VisibleOrder
+Configuration1_Item6=Description=57|Designator=57|LibRef=57|Quantity=57
 OutputType2=ComponentCrossReference
 OutputName2=Component Cross Reference Report
 OutputDocumentPath2=
 OutputVariantName2=[No Variations]
 OutputDefault2=0
+Configuration2_Name1=ColumnNameFormat
+Configuration2_Item1=CaptionAsName
 OutputType3=ReportHierarchy
 OutputName3=Report Project Hierarchy
 OutputDocumentPath3=
