@@ -95,10 +95,10 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Paste
-      File : 2017_Ozone.GBP
+Generating : Bottom Solder
+      File : 2017_Ozone.GBS
 
-    Adding Layer      : Bottom Paste
+    Adding Layer      : Bottom Solder
 
     Adding Layer      : Bottom Layer
 
@@ -106,6 +106,13 @@ Generating : Bottom Paste
 
 
 Used DCodes :
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
 *************************************************************
 
 *************************************************************
@@ -127,6 +134,6 @@ Generating : Mechanical 1
 
 Used DCodes :
     D28
-    D31
+    D29
 *************************************************************
 

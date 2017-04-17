@@ -1,12 +1,19 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : Project [2017_Ozone.PrjPcb]
-   Generated File[2017_Ozone-Plated.TXT]
-   Generated File[2017_Ozone.LDP]
-   Generated File[2017_Ozone.DRR]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [2017_Ozone.PrjPcb]
+   Generated File[2017_Ozone.GTL]
+   Generated File[2017_Ozone.GBL]
+   Generated File[2017_Ozone.GTO]
+   Generated File[2017_Ozone.GTS]
+   Generated File[2017_Ozone.GBS]
+   Generated File[2017_Ozone.GBO]
+   Generated File[2017_Ozone.GM1]
+   Generated File[2017_Ozone.RUL]
+   Generated File[2017_Ozone.EXTREP]
+   Generated File[2017_Ozone.REP]
 
 
-Files Generated   : 3
+Files Generated   : 10
 Documents Printed : 0
 
-Finished Output Generation At 5:55:52 PM On 15/04/2017
+Finished Output Generation At 7:55:30 PM On 16/04/2017

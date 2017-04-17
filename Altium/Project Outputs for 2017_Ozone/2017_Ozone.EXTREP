@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: 2017_Ozone.GBR   15/04/2017  5:54:09 PM
+Gerber File Extension Report For: 2017_Ozone.GBR   16/04/2017  7:55:28 PM
 ------------------------------------------------------------------------------------------
 
 
@@ -10,7 +10,7 @@ Layer Extension     Layer Description
 .GBL                Bottom Layer                            
 .GTO                Top Overlay                             
 .GTS                Top Solder                              
-.GBP                Bottom Paste                            
+.GBS                Bottom Solder                           
 .GBO                Bottom Overlay                          
 .GM1                Mechanical 1                            
 ------------------------------------------------------------------------------------------
