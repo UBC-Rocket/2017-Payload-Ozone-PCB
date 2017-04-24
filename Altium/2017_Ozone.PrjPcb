@@ -140,23 +140,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document7]
-DocumentPath=Revised_PCBWay.Cam
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
 [GeneratedDocument1]
 DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone-Plated.TXT
 DItemRevisionGUID=
@@ -170,54 +153,26 @@ DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument6]
 DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.GBP
 DItemRevisionGUID=
 
-[GeneratedDocument7]
-DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument12]
+[GeneratedDocument5]
 DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument13]
+[GeneratedDocument6]
 DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.REP
 DItemRevisionGUID=
 
-[GeneratedDocument14]
+[GeneratedDocument7]
 DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument15]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for 2017_Ozone\2017_Ozone.xls
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for 2017_Ozone\Design Rule Check - 2017_Ozone.html
 DItemRevisionGUID=
 
@@ -583,7 +538,7 @@ Configuration12_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLaye
 [OutputGroup6]
 Name=Report Outputs
 Description=
-TargetPrinter=Canon MG2900 series Printer
+TargetPrinter=Send To OneNote 2013
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=BOM_PartType
 OutputName1=Bill of Materials
@@ -596,13 +551,13 @@ Configuration1_Item1=CaptionAsName
 Configuration1_Name2=Filter
 Configuration1_Item2=545046300E5446696C74657257726170706572000D46696C7465722E416374697665090F46696C7465722E43726974657269610A04000000000000000000
 Configuration1_Name3=General
-Configuration1_Item3=OpenExported=False|AddToProject=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePCBData=False|IncludeVaultData=False|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=BOM Simple.XLT|BatchMode=5|FormWidth=1674|FormHeight=1164|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>
+Configuration1_Item3=OpenExported=False|AddToProject=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePCBData=False|IncludeVaultData=False|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=BOM Simple.XLT|BatchMode=5|FormWidth=2022|FormHeight=1327|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>
 Configuration1_Name4=GroupOrder
-Configuration1_Item4=Comment=True|Footprint=True
+Configuration1_Item4=Manufacturer Part Number 1=True
 Configuration1_Name5=SortOrder
-Configuration1_Item5=Description=Down
+Configuration1_Item5=Manufacturer Part Number 1=Down
 Configuration1_Name6=VisibleOrder
-Configuration1_Item6=Description=57|Designator=57|LibRef=57|Quantity=57
+Configuration1_Item6=Description=169|Designator=96|Quantity=86|Manufacturer 1=112|Manufacturer Part Number 1=161|Supplier 1=33|Supplier Part Number 1=37
 OutputType2=ComponentCrossReference
 OutputName2=Component Cross Reference Report
 OutputDocumentPath2=

@@ -1,19 +1,9 @@
-Output: Gerber Files
-Type  : Gerber
+Output: Bill of Materials
+Type  : BOM
 From  : Variant [[No Variations]] of Project [2017_Ozone.PrjPcb]
-   Generated File[2017_Ozone.GTL]
-   Generated File[2017_Ozone.GBL]
-   Generated File[2017_Ozone.GTO]
-   Generated File[2017_Ozone.GTS]
-   Generated File[2017_Ozone.GBS]
-   Generated File[2017_Ozone.GBO]
-   Generated File[2017_Ozone.GM1]
-   Generated File[2017_Ozone.RUL]
-   Generated File[2017_Ozone.EXTREP]
-   Generated File[2017_Ozone.REP]
 
 
-Files Generated   : 10
+Files Generated   : 0
 Documents Printed : 0
 
-Finished Output Generation At 7:55:30 PM On 16/04/2017
+Finished Output Generation At 11:17:25 PM On 23/04/2017
